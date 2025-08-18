@@ -29,7 +29,8 @@ anime({
   targets: 'path',
   strokeDashoffset: [anime.setDashoffset, 0],
   easing: 'easeInOutSine',
-  duration: 2000,
+  duration: 10000,
+  // 2000 orginal
   delay: (el, i) => i * 500,
   direction: 'alternate',
   loop: true
@@ -40,3 +41,22 @@ anime({
 //   duration: 1000,
 //   easing: 'easeOutExpo'
 // });
+
+const bg = document.querySelector(".bgAnime");
+    let mouse = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
+
+    window.addEventListener("mousemove", (e) => {
+      // Animate toward new mouse coords
+      anime({
+        targets: mouse,
+        x: e.clientX,
+        y: e.clientY,
+        easing: "easeOutExpo",
+        duration: 600,
+        update: () => {
+          let xPercent = (mouse.x / window.innerWidth) * 100;
+          let yPercent = (mouse.y / window.innerHeight) * 100;
+          bg.style.background = `radial-gradient(circle at ${xPercent}% ${yPercent}%, #020D3B, #000000)`;
+        }
+      });
+    });

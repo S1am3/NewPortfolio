@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 header {
   display: flex;
   align-items: center;
@@ -5,13 +10,18 @@ header {
   font-size: 2rem;
   height: 3em;  
   background-color: #1d2d44; 
+  position: relative;
+  top: 10px
+  /* z-index: 10; */
 }
-
-body {margin: 0;}
 
 .logo {
   text-align: center;
   font-size: 50px;
+}
+
+a {
+  z-index: 900;;
 }
 
 /* .hamburger { styles the box }
@@ -21,12 +31,12 @@ body {margin: 0;}
 .hamburger {
   width: 2em;
   height: 1.5em;
-  position: relative;
+  position: fixed;
   cursor: pointer;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  z-index: 1101;  
+  z-index: 1200;  
   right: 1rem;          
 }
 
@@ -110,22 +120,135 @@ svg {
 }
 
 .logoLink:hover svg path {
-  stroke: rgb(0, 0, 0);
+  stroke: #748cab;
 }
 
-footer { background-color: #1F1F1F;
-     color: #fff;
-     font-size: .80em;
-     font-style: italic; 
-     text-align: center; 
+footer { 
+    background-color: #1d2d44;
+    color: #fff;
+    font-size: .8rem;
+    font-style: italic; 
+    text-align: center; 
     padding: 1em;
-    border-top: 2px solid#FFF;}
+    /* border-top: 2px solid#FFF; */
+    /* z-index: 900; */
+}
 
-#wrapper {
-  background-color: #f0ebd8;
-  padding: 0%;
+.introHeading {
+  text-align: center;
+  font-size: 3rem;
+  /* add font */
+  flex-wrap: wrap;
+  margin-top: 0.5em;
+  margin-bottom: 0.1em;
+  font-weight: bold;
+  color: white;
+  /* width: 80%; */
+  /* align-self: left; */
+}
+
+.introText {
+  text-align: center;
+  font-size: 2rem;
+  /* add font */
+  margin-top: 0.4em;
+  flex-wrap: wrap;
+  color: white;
+  /* width: 80%; */
+  /* align-self: left; */
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+  flex: 1;
+  z-index: 1;
+}
+
+.buttonContainer {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+
+.button {
+  border: none;
+  color: rgb(0, 0, 0);
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 12px;
+}
+
+.button1 {
+  background-color: black;
+  color: white;
+  border: 2px solid rgb(255, 255, 255);
+}
+
+.button1:hover {
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+}
+
+.buttonContainerTwo {
+  display: flex;
+  flex-direction: row;
+  /* width: 78%; */
+  justify-content: center;
+  gap: 10px;
+}
+
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+      display: flex;
+      flex-direction: column; /* stack header, main, footer vertically */
+      min-height: 100vh; /* viewport height */
 }
 
 main {
-    min-height: 100dvh;
+  flex: 1; /* pushes footer to bottom by taking all extra space */
+  display: flex;
 }
+
+.bgAnime {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  background: radial-gradient(circle at center,#020D3B, #000000);
+  transition: background 0.2s ease-out;
+}
+
+.wrapper {
+  position: relative;
+  height: 86vh;
+  width: 100%;
+  overflow: hidden;
+  display:flex;
+  bottom: 5vh;
+  /* right: 10vh; */
+}
+
+.footerText {
+  position: relative;
+  z-index: 1;
+}
+

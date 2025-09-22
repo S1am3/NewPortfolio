@@ -170,7 +170,7 @@ footer {
 .buttonContainer {
   display: flex;
   flex-direction: column;
-  width: 40%;
+  max-width: 40%;
 }
 
 .button {
@@ -252,3 +252,84 @@ main {
   z-index: 1;
 }
 
+@media (max-width: 768px) {
+  .introHeading {
+    font-size: 2rem;
+    width: 90%;
+  }
+
+  .introText {
+    font-size: 1.5rem;
+    width: 90%;
+  }
+
+  .buttonContainer {
+    max-width: 70%;
+  }
+
+  .buttonContainerTwo {
+    flex-direction: row;
+    max-width: 100%;
+  }
+
+  .button {
+    font-size: 14px;
+    padding: 12px 24px;
+  }
+
+  .hamburger {
+    width: 1.5em;
+    height: 1em;
+    right: 0.5rem;          
+  }
+
+  .hamburger span {
+    height: 0.15em;
+  }
+
+  .side-nav {
+    width: 60em;
+    padding-top: 10em;
+  }
+
+  .side-nav ul li a {
+    font-size: 2rem;
+  }
+  .side-nav {
+    position: fixed;
+    top: 0;
+    right: -20em; /* hidden offscreen */
+    width: 20em;
+    max-height: 100%;
+    background: #333;
+    color: white;
+    padding-top: 15em;
+    transition: right 0.3s ease;
+    z-index: 1000;
+  }
+
+  /* Show side nav */
+  .side-nav.open {
+    right: 0;
+  }
+
+  .side-nav ul {
+    list-style: none;
+    /* padding: 0; */
+    text-align: center;
+  }
+
+  .side-nav ul li {
+    padding: 15px 20px;
+  }
+
+  .side-nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 3rem;
+  }
+
+  .side-nav ul li a:hover {
+    text-decoration: underline;
+  }
+}

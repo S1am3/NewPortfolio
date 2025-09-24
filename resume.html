@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Portfolio</title>
+    <title>My resume</title>
 </head>
 <body>
     <header class="header-content">
@@ -29,7 +29,7 @@
         </nav>
         <!-- <h1>Welcome to my Portfolio</h1> -->
     </header>
-    <main>
+    <main class="project-page">
         <nav class="side-nav" id="sideNav">
             <ul>
                 <li><a href="index.html" onclick="closeNav()" class="nav-link">Home</a></li>
@@ -38,35 +38,17 @@
                 <!-- <li><a href="contact.html" onclick="closeNav()" class="nav-link">Contact</a></li> -->
             </ul>
         </nav>
-        <div class="wrapper">
-            <div class="bgAnime"></div>
-            <div class="container">
+        <div class="bgAnime"></div>
+        <!-- <iframe src="assets/resume.pdf" type="application/pdf" width="100%" height="700">
+            <p>Your browser does not support PDFs. 
+                <a href="assets/resume.pdf" target="_blank">Download the PDF</a>.
+            </p>
+        </iframe> -->
+        <div class="container">
                 <div class="buttonContainer">
-                    <!-- "Creating solutions to make life simpler and better" -->
-                    <h1 class="introHeading">Creating solutions for <br> simpler and better life</h1>
-                    <p class="introText">Hello, my name is Sammy. <br> I’m a Computer Science student and aspiring software developer.</p>
-                    <div class="buttonContainerTwo">
-                        <button class="button button1" onclick="location.href='https://github.com/S1am3'">View Projects</button>
-                        <!-- <button class="button button1" onclick="location.href='#contact'">Contact Me</button> -->
-                        <button class="button button1" onclick="location.href='mailto:Sammy.situ09@gmail.com?subject=Hello!&body=Hello Sammy, '">Contact Me</button>
-                    </div>
+                        <a href="assets/resume.pdf" download class="button button1">Download Resume</a>
                 </div>
-                <img src="assets/Samphoto1.jpg" alt="Profile Picture" class="profile-pic">
-                <style>
-                    .profile-pic {
-                        max-width: 20%; 
-                        height:auto; 
-                        border-radius: 5%; 
-                        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-                    } 
-                    @media (max-width: 768px) {
-                        .profile-pic{
-                            max-width: 30%;
-                        }
-                    }
-                </style>
             </div>
-        </div>
     </main>
     <footer>
         <p class="footerText">Sammy &copy; 2025</p>

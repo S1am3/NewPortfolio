@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Portfolio</title>
+    <title>My Project</title>
 </head>
 <body>
     <header class="header-content">
@@ -29,7 +29,7 @@
         </nav>
         <!-- <h1>Welcome to my Portfolio</h1> -->
     </header>
-    <main>
+    <main class="project-page">
         <nav class="side-nav" id="sideNav">
             <ul>
                 <li><a href="index.html" onclick="closeNav()" class="nav-link">Home</a></li>
@@ -38,33 +38,31 @@
                 <!-- <li><a href="contact.html" onclick="closeNav()" class="nav-link">Contact</a></li> -->
             </ul>
         </nav>
-        <div class="wrapper">
-            <div class="bgAnime"></div>
-            <div class="container">
-                <div class="buttonContainer">
-                    <!-- "Creating solutions to make life simpler and better" -->
-                    <h1 class="introHeading">Creating solutions for <br> simpler and better life</h1>
-                    <p class="introText">Hello, my name is Sammy. <br> I’m a Computer Science student and aspiring software developer.</p>
-                    <div class="buttonContainerTwo">
-                        <button class="button button1" onclick="location.href='https://github.com/S1am3'">View Projects</button>
-                        <!-- <button class="button button1" onclick="location.href='#contact'">Contact Me</button> -->
-                        <button class="button button1" onclick="location.href='mailto:Sammy.situ09@gmail.com?subject=Hello!&body=Hello Sammy, '">Contact Me</button>
-                    </div>
+        <div class="bgAnime"></div>
+        <div class="card-container">
+            <div class="card">
+                <img src="assets/warframeOutput.png">
+                <div class="content">
+                    <h3>wManagerProject</h3>
+                    <p>I made a C# console application the can manages character data from the game Warframe. I used JSON to store the data, integrated CRUD functions</p>
+                    <a href="https://github.com/S1am3/cSharp2025" class="btn">Read More</a>
                 </div>
-                <img src="assets/Samphoto1.jpg" alt="Profile Picture" class="profile-pic">
-                <style>
-                    .profile-pic {
-                        max-width: 20%; 
-                        height:auto; 
-                        border-radius: 5%; 
-                        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-                    } 
-                    @media (max-width: 768px) {
-                        .profile-pic{
-                            max-width: 30%;
-                        }
-                    }
-                </style>
+            </div>
+            <div class="card">
+                <img src="assets/myWeb.png">
+                <div class="content">
+                    <h3>Portfolio Website</h3>
+                    <p>I made the new site to replace my previous portfolio. I will use this site to showcase my projects.</p>
+                    <a href="#content" class="btn">Read More</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="assets/raspberry.jpg">
+                <div class="content">
+                    <h3>Coming Soon</h3>
+                    <p>Current Side Projects: I'm working on is a fencing scoring machine using a Raspberry Pi, and other project to gain more experience.</p>
+                    <!-- <a href="#content" class="btn">Read More</a> -->
+                </div>
             </div>
         </div>
     </main>
